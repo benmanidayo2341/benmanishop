@@ -1,0 +1,62 @@
+<!-- 省略なし完全版 -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>音楽制作依頼フォーム</title>
+  <style>
+    body { font-family: sans-serif; background: #f9f9f9; padding: 2rem; }
+    form { max-width: 640px; margin: auto; background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    input, textarea, select { width: 100%; padding: 0.5rem; margin-top: 0.5rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 4px; }
+    button { background: #007bff; color: white; padding: 0.7rem 1.2rem; border: none; border-radius: 4px; cursor: pointer; }
+    .note { font-size: 0.9rem; color: #555; margin-bottom: 1rem; }
+    .paypay-box { background: #fff8dc; padding: 1rem; border: 1px solid #f0c040; border-radius: 6px; margin-bottom: 1rem; }
+    .contact-box { background: #eef; padding: 1rem; border: 1px solid #99c; border-radius: 6px; margin-top: 1rem; }
+    .highlight { font-weight: bold; color: #007bff; font-family: monospace; }
+  </style>
+</head>
+<body>
+  <h1 style="text-align:center;">🎵 音楽制作依頼フォーム</h1>
+  <form
+    action="https://formspree.io/f/mgvzbldy"
+    method="POST"
+  >
+    <label>ジャンル</label>
+    <input type="text" name="genre" placeholder="例：Trap, EDM, Brazilian funkなど" required />
+    <p class="note">
+      ※Lo-fiなどは作ることができません。ジャンルはご相談ください。<br />
+      Brazilian funkは得意です。お気軽にご依頼ください！
+    </p>
+
+    <label>用途</label>
+    <input type="text" name="purpose" placeholder="例：動画BGM、配信用" required />
+
+    <label>参考URL（任意）</label>
+    <input type="url" name="reference" placeholder="参考音源など" />
+
+    <label>希望納期</label>
+    <input type="date" name="deadline" required />
+
+    <label>予算（円）</label>
+    <input type="number" name="budget" required />
+
+    <label>詳細・要望</label>
+    <textarea name="details" rows="4" placeholder="曲調、尺、使用楽器など" required></textarea>
+
+    <p class="note">※使用してほしいドラムキットやサンプルパックがある場合は、Discordの <span class="highlight">@aaaa_konbanwa</span> に送ってください。</p>
+
+    <div class="paypay-box">
+      <p>💴 <strong>PayPayでのお支払いはこちら：</strong></p>
+      <p>PayPay ID: <span class="highlight">benmani2341</span></p>
+      <p class="note">※依頼送信後、PayPayで送金をお願いします。</p>
+    </div>
+
+    <div class="contact-box">
+      <p>📩 <strong>何かあれば、Discordの <span class="highlight">@aaaa_konbanwa</span> にお伝えください。</strong></p>
+    </div>
+
+    <button type="submit">依頼を送信</button>
+  </form>
+</body>
+</html>
