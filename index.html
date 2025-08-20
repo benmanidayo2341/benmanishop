@@ -5,7 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>音楽制作依頼フォーム</title>
   <style>
-    body { font-family: sans-serif; background: #f9f9f9; padding: 2rem; }
+    body { font-family: sans-serif; background: #f9f9f9; margin: 0; }
+    nav { background: #333; padding: 0.5rem 1rem; }
+    nav ul { list-style: none; display: flex; gap: 1rem; margin: 0; padding: 0; }
+    nav a { color: white; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+    main { padding: 2rem; }
     form { max-width: 640px; margin: auto; background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
     input, textarea, select { width: 100%; padding: 0.5rem; margin-top: 0.5rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 4px; }
     button { background: #007bff; color: white; padding: 0.7rem 1.2rem; border: none; border-radius: 4px; cursor: pointer; }
@@ -20,66 +25,72 @@
   </style>
 </head>
 <body>
-  <h1 style="text-align:center;">🎵 音楽制作依頼フォーム</h1>
-  <form
-    action="https://formspree.io/f/mgvzbldy"
-    method="POST"
-  >
-    <label>ジャンル</label>
-    <input type="text" name="genre" placeholder="例：Trap, EDM, Brazilian funkなど" required />
-    <p class="note">
-      ※Lo-fiなどは作ることができません。ジャンルはご相談ください。<br />
-      Brazilian funkは得意です。お気軽にご依頼ください！
-    </p>
+  <nav>
+    <ul>
+      <li><a href="index.html">🎵 依頼フォーム</a></li>
+      <li><a href="flm.html">📁 ファイル販売所</a></li>
+    </ul>
+  </nav>
 
-    <label>用途</label>
-    <input type="text" name="purpose" placeholder="例：動画BGM、配信用" required />
+  <main>
+    <h1 style="text-align:center;">🎵 音楽制作依頼フォーム</h1>
+    <form action="https://formspree.io/f/mgvzbldy" method="POST">
+      <label>ジャンル</label>
+      <input type="text" name="genre" placeholder="例：Trap, EDM, Brazilian funkなど" required />
+      <p class="note">
+        ※Lo-fiなどは作ることができません。ジャンルはご相談ください。<br />
+        Brazilian funkは得意です。お気軽にご依頼ください！
+      </p>
 
-    <label>参考URL（任意）</label>
-    <input type="url" name="reference" placeholder="参考音源など" />
+      <label>用途</label>
+      <input type="text" name="purpose" placeholder="例：動画BGM、配信用" required />
 
-    <label>希望納期</label>
-    <input type="date" name="deadline" required />
+      <label>参考URL（任意）</label>
+      <input type="url" name="reference" placeholder="参考音源など" />
 
-    <label>予算（円）</label>
-    <input type="number" name="budget" required />
+      <label>希望納期</label>
+      <input type="date" name="deadline" required />
 
-    <label>詳細・要望</label>
-    <textarea name="details" rows="4" placeholder="曲調、尺、使用楽器など" required></textarea>
+      <label>予算（円）</label>
+      <input type="number" name="budget" required />
 
-    <p class="note">※使用してほしいドラムキットやサンプルパックがある場合は、Discordの <span class="highlight">@aaaa_konbanwa</span> に送ってください。</p>
+      <label>詳細・要望</label>
+      <textarea name="details" rows="4" placeholder="曲調、尺、使用楽器など" required></textarea>
 
-    <div class="pay-box">
-      <p>💴 <strong>お支払い方法：</strong></p>
-      <ul>
-        <li>PayPay → <span class="highlight">benmani2341</span></li>
-        <li>PayPalをご希望の方は、Discordの <span class="highlight">@aaaa_konbanwa</span> にご連絡ください。</li>
-      </ul>
-      <p class="note">※依頼送信後、PayPayで送金をお願いします。</p>
+      <p class="note">※使用してほしいドラムキットやサンプルパックがある場合は、Discordの <span class="highlight">@aaaa_konbanwa</span> に送ってください。</p>
+
+      <div class="pay-box">
+        <p>💴 <strong>お支払い方法：</strong></p>
+        <ul>
+          <li>PayPay → <span class="highlight">benmani2341</span></li>
+          <li>PayPalをご希望の方は、Discordの <span class="highlight">@aaaa_konbanwa</span> にご連絡ください。</li>
+        </ul>
+        <p class="note">※依頼送信後、PayPayで送金をお願いします。</p>
+      </div>
+
+      <div class="contact-box">
+        <p>📩 <strong>何かあれば、Discordの <span class="highlight">@aaaa_konbanwa</span> にお伝えください。</strong></p>
+      </div>
+
+      <div class="terms-box">
+        <h3>📜 利用規約・注意事項</h3>
+        <ul>
+          <li>納品後の修正は1回まで無料です。2回目以降は追加料金が発生する場合があります。</li>
+          <li>商用利用は可能ですが、著作権の譲渡は含まれません。</li>
+          <li>制作物の一部をポートフォリオとして公開する場合があります。非公開希望の方は事前にご相談ください。</li>
+          <li>不明点やご希望は、遠慮なくDiscordでご相談ください。</li>
+        </ul>
+      </div>
+
+      <button type="submit">依頼を送信</button>
+    </form>
+
+    <div class="donate-text">
+      <p>🎁 制作活動の応援はこちらから</p>
+      <a href="https://ko-fi.com/bmfunk2341" target="_blank">
+        <img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Support on Ko-fi" style="height: 40px;" />
+      </a>
     </div>
-
-    <div class="contact-box">
-      <p>📩 <strong>何かあれば、Discordの <span class="highlight">@aaaa_konbanwa</span> にお伝えください。</strong></p>
-    </div>
-
-    <div class="terms-box">
-      <h3>📜 利用規約・注意事項</h3>
-      <ul>
-        <li>納品後の修正は1回まで無料です。2回目以降は追加料金が発生する場合があります。</li>
-        <li>商用利用は可能ですが、著作権の譲渡は含まれません。</li>
-        <li>制作物の一部をポートフォリオとして公開する場合があります。非公開希望の方は事前にご相談ください。</li>
-        <li>不明点やご希望は、遠慮なくDiscordでご相談ください。</li>
-      </ul>
-    </div>
-
-    <button type="submit">依頼を送信</button>
-  </form>
-
-  <div class="donate-text">
-    <p>🎁 制作活動の応援はこちらから</p>
-    <a href="https://ko-fi.com/bmfunk2341" target="_blank">
-      <img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Support on Ko-fi" style="height: 40px;" />
-    </a>
-  </div>
+  </main>
 </body>
 </html>
